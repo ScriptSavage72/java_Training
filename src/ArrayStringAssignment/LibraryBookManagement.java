@@ -1,5 +1,7 @@
 package ArrayStringAssignment;
 
+import java.util.Scanner;
+
 /*
 A library stores a list of book titles. Create a Java program that uses a string array to store 6 book titles. Write functions that:
 •	Searches for a specific book title entered by the user.
@@ -54,7 +56,17 @@ public class LibraryBookManagement {
 
         String[] books = {"Quran", "Bible", "Torah", "Gita", "AtheistBook", "Dictionary"};
         LibraryBookManagement library = new LibraryBookManagement(books);
-        library.searchBook("Torah");
-        library.replaceBook("Torah", "HarryPotter");
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Enter the name of a book: ");
+        library.searchBook(scan.next());
+        System.out.println();
+
+        System.out.print("Enter the book you want to replace: ");
+        String oldBook = scan.nextLine();
+
+        System.out.println();
+        System.out.print("Enter the name of the new book: ");
+        String newBook = scan.nextLine();
+        library.replaceBook(oldBook, newBook);
     }
 }

@@ -8,6 +8,8 @@ to store the names of 5 products and another array to store their corresponding 
 
  */
 
+import java.util.Scanner;
+
 public class ProductInventoryManagement {
     String productNames[];
     int productPrices[];
@@ -45,7 +47,9 @@ public class ProductInventoryManagement {
         ProductInventoryManagement products = new ProductInventoryManagement(productNames,productPrices);
 
         products.displayAll();
-        products.searchByName("tomatoes");
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Please enter a fruit: ");
+        products.searchByName(scan.next());
 
 
 
