@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 
 public class Grades {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         System.out.println("Enter an age: ");
         int Age = scan.nextInt();
